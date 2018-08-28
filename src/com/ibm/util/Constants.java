@@ -43,6 +43,8 @@ public class Constants {
 	public static final String daily_proc = "{call Daily_Summary_proc(sysdate-1)}";
 	public static final String daily_report = "select Partner_name ,Product_Name,Requests_Received ,No_User_Response ,User_Yes ,user_No ,user_None ,user_Null_xy ,Time_Out ,Yes_perc ,Activations ,Activation_perc from daily_summary where trunc(UPLOAD_DATE)=trunc(sysdate) and CG_flow=? order by Partner_name ,Product_Name";
 
+	
+	
 	// Transaction Dump
 	public static final String transaction_delete = "delete from transaction_dump where trunc(upload_date)=trunc(sysdate)";
 	public static final String transaction_proc = "{call TRANSACTION_DUMP_PROC(sysdate-1)}";
